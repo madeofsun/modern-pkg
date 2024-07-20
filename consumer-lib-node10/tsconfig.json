@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.common.json",
+  "compilerOptions": {
+    "module": "ES2020",
+    "moduleResolution": "Node10",
+    "verbatimModuleSyntax": false,
+    "types": ["node"]
+  }
+}

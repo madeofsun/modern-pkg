@@ -1,0 +1,26 @@
+{
+  "name": "consumer-lib-node10",
+  "version": "0.1.0",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./dist/*": {
+      "types": "./dist/*.d.ts"
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -p tsconfig.build.json"
+  },
+  "dependencies": {
+    "pkg-cjs-compat": "file:../pkg-cjs-compat/pkg-cjs-compat-1.0.0.tgz",
+    "pkg-esm-pure": "file:../pkg-esm-pure/pkg-esm-pure-1.0.0.tgz"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,42 @@
+{
+  "name": "pkg-cjs-compat",
+  "version": "1.0.0",
+  "type": "commonjs",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": {
+      "browser": "./dist/browser-esm/index.mjs",
+      "default": "./dist/index.js"
+    },
+    "./get-value": {
+      "browser": "./dist/browser-esm/get-value.mjs",
+      "default": "./dist/get-value.js"
+    },
+    "./dist/*": {
+      "types": "./dist/*.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "get-value": [
+        "dist/get-value.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "shx rm -rf dist && tsc --project tsconfig.build.json && rollup --config",
+    "watch": "shx rm -rf dist && (trap 'kill 0' SIGINT; tsc --project tsconfig.build.json --watch & rollup --config --watch)"
+  },
+  "dependencies": {
+    "@types/node": "^20"
+  },
+  "devDependencies": {
+    "@rollup/plugin-typescript": "11.1.6",
+    "rollup": "4.17.2",
+    "tslib": "^2.6.2",
+    "typescript": "^5.5.3"
+  }
+}

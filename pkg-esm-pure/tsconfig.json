@@ -1,0 +1,9 @@
+{
+  "extends": "../tsconfig.common.json",
+  "exclude": ["**/coverage", "**/dist", "**/node_modules", "**/__fixtures__"],
+  "compilerOptions": {
+    "module": "Node16",
+    "moduleResolution": "Node16",
+    "types": ["node"]
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "name": "consumer-vite",
+  "type": "module",
+  "scripts": {
+    "dev": "webpack serve",
+    "build": "npx tsc && webpack build"
+  },
+  "dependencies": {
+    "pkg-cjs-compat": "file:../pkg-cjs-compat/pkg-cjs-compat-1.0.0.tgz",
+    "pkg-esm-pure": "file:../pkg-esm-pure/pkg-esm-pure-1.0.0.tgz",
+    "consumer-lib-node10": "file:../consumer-lib-node10/consumer-lib-node10-0.1.0.tgz",
+    "consumer-lib-node16": "file:../consumer-lib-node16/consumer-lib-node16-0.1.0.tgz"
+  },
+  "devDependencies": {
+    "html-webpack-plugin": "^5.6.0",
+    "ts-loader": "^9.5.1",
+    "typescript": "^5.5.3",
+    "webpack": "^5.91.0",
+    "webpack-cli": "^5.1.4",
+    "webpack-dev-server": "^5.0.4"
+  }
+}

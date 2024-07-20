@@ -1,0 +1,33 @@
+{
+  "name": "pkg-esm-pure",
+  "version": "1.0.0",
+  "type": "module",
+  "main": "./dist/index.js",
+  "exports": {
+    ".": "./dist/index.js",
+    "./get-value": "./dist/get-value.js",
+    "./dist/*": {
+      "types": "./dist/*.d.ts"
+    }
+  },
+  "typesVersions": {
+    "*": {
+      "get-value": [
+        "dist/get-value.d.ts"
+      ]
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -p tsconfig.build.json",
+    "watch": "npm run build -- --watch"
+  },
+  "dependencies": {
+    "@types/node": "^20"
+  },
+  "devDependencies": {
+    "typescript": "^5.5.3"
+  }
+}

@@ -1,0 +1,18 @@
+{
+  "name": "consumer-node",
+  "type": "module",
+  "scripts": {
+    "build": "shx rm -rf dist && tsc -p tsconfig.build.json",
+    "start": "echo \"\\nesm\" && node dist/index.js && echo \"\\ncjs\" && node dist/index.cjs"
+  },
+  "dependencies": {
+    "pkg-cjs-compat": "file:../pkg-cjs-compat/pkg-cjs-compat-1.0.0.tgz",
+    "pkg-esm-pure": "file:../pkg-esm-pure/pkg-esm-pure-1.0.0.tgz",
+    "consumer-lib-node10": "file:../consumer-lib-node10/consumer-lib-node10-0.1.0.tgz",
+    "consumer-lib-node16": "file:../consumer-lib-node16/consumer-lib-node16-0.1.0.tgz"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5.5.3"
+  }
+}
