@@ -4,7 +4,7 @@ import typescript from "@rollup/plugin-typescript";
 export default defineConfig({
   input: ["./src/index.ts", "./src/get-value.ts"],
   output: {
-    dir: "dist/browser-esm",
+    dir: "dist/esm",
     entryFileNames: "[name].mjs",
     format: "esm",
   },

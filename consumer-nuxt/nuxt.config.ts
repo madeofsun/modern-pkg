@@ -4,4 +4,9 @@ import { defineNuxtConfig } from "nuxt/config";
 export default defineNuxtConfig({
   devtools: { enabled: false },
   compatibilityDate: "2024-07-20",
+  vite: {
+    build: {
+      minify: false,
+    },
+  },
 });

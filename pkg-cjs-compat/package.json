@@ -3,13 +3,14 @@
   "version": "1.0.0",
   "type": "commonjs",
   "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
   "exports": {
     ".": {
-      "browser": "./dist/browser-esm/index.mjs",
+      "module": "./dist/esm/index.mjs",
       "default": "./dist/index.js"
     },
     "./get-value": {
-      "browser": "./dist/browser-esm/get-value.mjs",
+      "module": "./dist/esm/get-value.mjs",
       "default": "./dist/get-value.js"
     },
     "./dist/*": {
